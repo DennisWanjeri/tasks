@@ -18,8 +18,7 @@ def cleanhtml(raw_html):
 for i in range(1, m_row + 1):
     cell_obj = sheet_obj.cell(row = i, column = 8)
     raw_data = cell_obj.value
-    newstr = ""
-    newstr = cleanhtml(newstr)
+    newstr = cleanhtml(raw_data)
     cell_obj.value = newstr
 
 wb_obj.save(filename="100_multichoice.xlsx")
